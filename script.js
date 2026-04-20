@@ -7,11 +7,16 @@ header_btn.forEach(btn => {
         e.stopPropagation();
         dropdown.forEach(down => {
             if (down.id === btn.value) {
-                    down.classList.toggle("show");
-                };
-            });
+                down.classList.toggle("show");
+            };
+            if (down.id != btn.value) {
+                setTimeout(() => {
+                    down.classList.remove("show");
+                }, 300);
+            };
         });
     });
+});
 
 dropdown.forEach(down => {
     down.addEventListener("click", (e) => {
@@ -25,7 +30,7 @@ window.addEventListener("click", () => {
     });
 });
 
-const darkMode = document.getElementById("dark_mode");
+const darkMode = document.querySelector(".dark_mode");
 const root = document.querySelector(":root"); 
 
 darkMode.addEventListener("click", () => {
@@ -36,7 +41,7 @@ darkMode.addEventListener("click", () => {
     classic.style.color = "white";
 });
 
-const classic = document.getElementById("classic");
+const classic = document.querySelector(".classic");
 
 classic.addEventListener("click", () => {
     root.classList.toggle("dark_mode");
