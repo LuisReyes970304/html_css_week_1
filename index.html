@@ -12,25 +12,61 @@
         <header>
             <h1>Luis Rafael Reyes Caro</h1>
             <figure class="main_nav">
-                <nav href="#" class="block">
-                    <button>Profile</button>
-                    <ul class="dropdown">
+                <nav class="block">
+                    <button value="profile">Profile</button>
+                    <ul class="dropdown" id="profile">
                         <li><a href="#about_myself">About Myself</a></li>
-                        <li><a href="#proyects">Proyects</a></li>
+                        <li><a href="#projects">Proyects</a></li>
                         <li><a href="#contact">Contact me</a></li>
                     </ul>
                 </nav>
-                <nav href="#" class="block">
-                    <button>Profile</button>
+                <nav class="block">
+                    <button value="style">Style</button>
+                    <ul class="dropdown" id="style">
+                        <li><button id="dark_mode">Dark mode</button></li>
+                        <li><button id="classic">Classic</button></li>
+                    </ul>
                 </nav>
-                <nav href="#" class="block">
-                    <button>Profile</button>
+                <nav class="block">
+                    <a href="pets.html">
+                        <button>Pets</button>
+                    </a>
                 </nav>
                 
             </figure>
         </header>
     </body>
     <main>
+        <section id="about_myself">
+            <aside>
+                <img src="assest/images/profile_picture.jpeg" alt="profile_picture" class="profile_picture">
+                <p>
+                    I'm a 29-year-old developer currently transitioning into the tech industry.
+I'm building my skills in Python, JavaScript, HTML, and CSS, and working on real-world projects to strengthen my problem-solving abilities with Riwi Academy. Currently, I'm developing an ATM system project and improving my backend knowledge with Python and Git. I'm passionate about continuous learning, clean code, and building practical applications. Outside of tech, I enjoy reading manga and watching anime.
+                </p>
+            </aside>
+            <figure>
+                <fieldset class="p1">
+                    <h2>Goals</h2>
+                    <p>
+                        To secure a junior developer position where I can meaningfully contribute to impactful projects, continuously grow as an engineer, and deepen my understanding of building scalable, efficient, and well-architected applications, while collaborating with experienced teams and embracing challenges that push both my technical and professional development forward.
+                    </p>
+                </fieldset>
+                <fieldset class="p2">
+                    <h2>Currently learning</h2>
+                    <p>Currently expanding my skills in backend development with Python, with a strong focus on designing robust REST APIs, improving frontend–backend integration, and applying clean code principles, while also strengthening my workflow through Git and version control best practices to build scalable, maintainable, and high-quality applications</p>
+                </fieldset>
+                <fieldset class="p3">
+                    <h2>Tecnologies</h2>
+                    <p>
+                        I work with Python focused on backend development, applying object-oriented programming principles to build structured, scalable, and maintainable applications. On the frontend, I use HTML, CSS, and JavaScript to create responsive and user-friendly interfaces, enabling seamless integration between client and server.
+                    </p>
+                </fieldset>
+            </figure>
+        </section>
+        <section id="projects">
+            <aside></aside>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
