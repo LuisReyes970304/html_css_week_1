@@ -1,6 +1,6 @@
 const mainNav = document.querySelector('.main_nav');
 const dropdown = document.querySelectorAll('.dropdown');
-const header_btn = mainNav.querySelectorAll('button');
+const header_btn = mainNav.querySelectorAll('.button');
 
 header_btn.forEach(btn => {
     btn.addEventListener('click', (e) => {
