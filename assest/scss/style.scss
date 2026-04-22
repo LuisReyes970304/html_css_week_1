@@ -53,7 +53,6 @@ body {
                         width: 100px;
                         min-height: 40px;
                         font-size: large;
-                        background-color: white;
                         border: none;
                         border-radius: 5px;
                         cursor: pointer;
@@ -160,7 +159,6 @@ body {
                         gap: 30px;
                         grid-template-columns: repeat(4, 1fr);
                         grid-template-rows: repeat(3, 1fr);
-                        grid-template-rows: repeat(3, 1fr);
                         padding: 40px;
                             fieldset {
                                 border-radius: 8px;
@@ -199,6 +197,72 @@ body {
                                 grid-column: span 4 / span 4;
                                 grid-row-start: 3;
                             }
+                            .p4 {
+                                grid-column: span 4 / span 4;
+                                grid-row: span 3 / span 3;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 20px;
+                                    output {
+                                        display: flex;
+                                        width: 90%;
+                                        height: 80%;
+                                        border-radius: 8px;
+                                        border: 5px double var(--header-color);
+                                        background-color: rgba(50,0,100,0.1);
+                                        padding: 15px;
+                                        font-size: 35px;
+                                        text-align: center;
+                                        align-items: center;
+                                        color: var(--p-color);
+                                    }
+                                    form {
+                                        width: 90%;
+                                        height: 15%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        padding: 10px;
+                                            textarea {
+                                                width: 80%;
+                                                height: 90%;
+                                                border-radius: 8px;
+                                                resize: none;
+                                                background-color: rgba(50,0,100,0.1);
+                                                outline: none;
+                                                padding: 15px;
+                                                font-size: large;
+                                                border: 2px solid var(--header-color);
+                                                color: var(--p-color);
+                                                &:focus {
+                                                    border: 5px double var(--header-color);
+                                                }
+                                            }
+                                            button {
+                                                width: 15%;
+                                                height: 90%;
+                                                border-radius: 15px;
+                                                border: 2px solid var(--header-color);
+                                                cursor: pointer;
+                                                z-index: 2;
+                                                background-color: var(--btn);
+                                                color: white;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                &:active {
+                                                    border: 5px double white;
+                                                }
+                                                img {
+                                                    width: 90%;
+                                                    height: 90%;
+                                                }
+                                            }
+                                    }
+                            }
+            
             }
         }
     }

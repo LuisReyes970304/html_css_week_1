@@ -50,3 +50,22 @@ classic.addEventListener("click", () => {
     classic.style.color = "grey";
     darkMode.style.color = "white";
 });
+
+const chatForm = document.getElementById("chatForm");
+const chatInput = chatForm.querySelector("textarea");
+const chatOutput = document.querySelector("output");
+
+chatForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    const data = chatInput.value.trim();
+    chatInput.value = "";
+    if(!data) {
+        return;
+    }
+    if(data) {
+        chatOutput.value = "Thanks so much for that question. Our team will be contacting you as soon possible!"
+        let appointment = document.createElement("a");
+        
+    }
+});
