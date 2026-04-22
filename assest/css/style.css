@@ -2,268 +2,249 @@
   --header-color: rgb(40, 20, 80);
   --btn: rgb(10, 50, 150);
   --body-color: rgb(200, 200, 255);
-  --p-color: rgb(10, 30, 50);
-}
+  --p-color: rgb(10, 30, 50); }
 
 :root.dark_mode {
   --header-color: rgb(55, 23, 172);
   --btn: rgb(40, 20, 80);
   --body-color: rgb(15, 15, 30);
-  --p-color: rgb(200, 210, 255);
-}
+  --p-color: rgb(200, 210, 255); }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: serif;
-}
+  font-family: serif; }
 
 body {
   width: 100vw;
   background-color: var(--body-color);
-  overflow-x: hidden;
-}
-body header {
-  position: fixed;
-  width: 100%;
-  height: 55px;
-  background-color: var(--header-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
-body header h1 {
-  color: white;
-  padding: 20px;
-}
-body header .main_nav {
-  display: inline-flex;
-  padding-right: 20px;
-  width: 40%;
-  justify-content: space-between;
-}
-body header .main_nav .block {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  position: relative;
-}
-body header .main_nav .block button {
-  width: 100px;
-  min-height: 40px;
-  font-size: large;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 2;
-  background-color: var(--btn);
-  color: white;
-}
-body header .main_nav .block .dropdown {
-  display: none;
-  width: 170px;
-  background-color: var(--header-color);
-  padding: 20px;
-  margin-top: 30px;
-  flex-direction: column;
-  gap: 10px;
-  border-radius: 8px;
-  position: fixed;
-  color: white;
-}
-body header .main_nav .block .dropdown button {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  font-size: 16px;
-}
-body header .main_nav .block .dropdown button:hover {
-  color: grey;
-}
-body header .main_nav .block .dropdown.show {
-  display: flex;
-}
-body header .main_nav .block .dropdown li {
-  display: list-item;
-  margin: 10px;
-}
-body header .main_nav .block a {
-  color: white;
-  text-decoration: none;
-}
-body header .main_nav .block a:hover {
-  color: grey;
-}
-body main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-body main section {
-  width: 100%;
-  height: 95vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  margin-top: 55px;
-}
-body main section aside {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-column: span 1/span 1;
-  grid-row: span 2/span 2;
-  margin: 10px 10px 10px 10px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border: 5px double var(--header-color);
-  border-radius: 15px;
-  color: var(--p-color);
-}
-body main section aside h2 {
-  font-size: xx-large;
-}
-body main section aside .profile_picture {
-  width: 70%;
-  height: 45%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 15%;
-  border: 5px inset var(--btn);
-}
-body main section aside .python {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 15%;
-  border: 5px inset var(--btn);
-}
-body main section aside p {
-  display: flex;
-  text-align: center;
-  object-fit: cover;
-  color: var(--p-color);
-  font-weight: 600;
-  font-size: 20px;
-}
-body main section figure {
-  grid-column-start: 2;
-  grid-row-start: 1;
-  grid-column: 2 span/2 span;
-  grid-row: 2 span/2 span;
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  padding: 40px;
-}
-body main section figure fieldset {
-  border-radius: 8px;
-  border: 5px double var(--header-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 20px;
-  color: var(--p-color);
-  font-weight: 600;
-  font-size: 20px;
-}
-body main section figure fieldset ul {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  align-items: start;
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
-}
-body main section figure fieldset ul li {
-  color: var(--p-color);
-}
-body main section figure fieldset ul li a {
-  color: var(--p-color);
-}
-body main section figure .p1 {
-  grid-column: span 4/span 4;
-}
-body main section figure .p2 {
-  grid-column: span 4/span 4;
-  grid-row-start: 2;
-}
-body main section figure .p3 {
-  grid-column: span 4/span 4;
-  grid-row-start: 3;
-}
-body main section figure .p4 {
-  grid-column: span 4/span 4;
-  grid-row: span 3/span 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-body main section figure .p4 output {
-  display: flex;
-  width: 90%;
-  height: 80%;
-  border-radius: 8px;
-  border: 5px double var(--header-color);
-  background-color: rgba(50, 0, 100, 0.1);
-  padding: 15px;
-  font-size: 35px;
-  text-align: center;
-  align-items: center;
-  color: var(--p-color);
-}
-body main section figure .p4 form {
-  width: 90%;
-  height: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
-body main section figure .p4 form textarea {
-  width: 80%;
-  height: 90%;
-  border-radius: 8px;
-  resize: none;
-  background-color: rgba(50, 0, 100, 0.1);
-  outline: none;
-  padding: 15px;
-  font-size: large;
-  border: 2px solid var(--header-color);
-  color: var(--p-color);
-}
-body main section figure .p4 form textarea:focus {
-  border: 5px double var(--header-color);
-}
-body main section figure .p4 form button {
-  width: 15%;
-  height: 90%;
-  border-radius: 15px;
-  border: 2px solid var(--header-color);
-  cursor: pointer;
-  z-index: 2;
-  background-color: var(--btn);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body main section figure .p4 form button:active {
-  border: 5px double white;
-}
-body main section figure .p4 form button img {
-  width: 90%;
-  height: 90%;
-}
+  overflow-x: hidden; }
+  body header {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; }
+    body header h1 {
+      color: white;
+      padding: 20px; }
+    body header .main_nav {
+      display: inline-flex;
+      padding-right: 20px;
+      width: 40%;
+      justify-content: space-between; }
+      body header .main_nav .block {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        position: relative; }
+        body header .main_nav .block button {
+          width: 100px;
+          min-height: 40px;
+          font-size: large;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          z-index: 2;
+          background-color: var(--btn);
+          color: white; }
+        body header .main_nav .block .dropdown {
+          display: none;
+          width: 170px;
+          background-color: var(--header-color);
+          padding: 20px;
+          margin-top: 30px;
+          flex-direction: column;
+          gap: 10px;
+          border-radius: 8px;
+          position: fixed;
+          color: white; }
+          body header .main_nav .block .dropdown button {
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            font-size: 16px; }
+            body header .main_nav .block .dropdown button:hover {
+              color: grey; }
+          body header .main_nav .block .dropdown.show {
+            display: flex; }
+          body header .main_nav .block .dropdown li {
+            display: list-item;
+            margin: 10px; }
+        body header .main_nav .block a {
+          color: white;
+          text-decoration: none; }
+          body header .main_nav .block a:hover {
+            color: grey; }
+  body main {
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    body main .pet_section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      gap: 10px; }
+      body main .pet_section .pet_1,
+      body main .pet_section .pet_2,
+      body main .pet_section .pet_3 {
+        display: flex;
+        object-fit: cover;
+        object-position: top;
+        height: 55%;
+        width: 30%;
+        border-radius: 8px;
+        border: 5px inset var(--btn); }
+      body main .pet_section .pet_2 {
+        object-position: center;
+        height: 80%; }
+    body main section {
+      width: 100%;
+      height: 95vh;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      margin-top: 55px; }
+      body main section aside {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-column: span 1 / span 1;
+        grid-row: span 2/span 2;
+        margin: 10px 10px 10px 10px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 5px double var(--header-color);
+        border-radius: 15px;
+        color: var(--p-color); }
+        body main section aside h2 {
+          font-size: xx-large; }
+        body main section aside .profile_picture {
+          width: 70%;
+          height: 45%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 15%;
+          border: 5px inset var(--btn); }
+        body main section aside .python {
+          width: 180px;
+          height: 180px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 15%;
+          border: 5px inset var(--btn); }
+        body main section aside p {
+          display: flex;
+          text-align: center;
+          object-fit: cover;
+          color: var(--p-color);
+          font-weight: 600;
+          font-size: 20px; }
+      body main section figure {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-column: 2 span/2 span;
+        grid-row: 2 span/2 span;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 40px; }
+        body main section figure fieldset {
+          border-radius: 8px;
+          border: 5px double var(--header-color);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 20px;
+          color: var(--p-color);
+          font-weight: 600;
+          font-size: 20px; }
+          body main section figure fieldset ul {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            align-items: start;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between; }
+            body main section figure fieldset ul li {
+              color: var(--p-color); }
+              body main section figure fieldset ul li a {
+                color: var(--p-color); }
+        body main section figure .p1 {
+          grid-column: span 4 / span 4; }
+        body main section figure .p2 {
+          grid-column: span 4 / span 4;
+          grid-row-start: 2; }
+        body main section figure .p3 {
+          grid-column: span 4 / span 4;
+          grid-row-start: 3; }
+        body main section figure .p4 {
+          grid-column: span 4 / span 4;
+          grid-row: span 3 / span 3;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px; }
+          body main section figure .p4 output {
+            display: flex;
+            width: 90%;
+            height: 80%;
+            border-radius: 8px;
+            border: 5px double var(--header-color);
+            background-color: rgba(50, 0, 100, 0.1);
+            padding: 15px;
+            font-size: 35px;
+            text-align: center;
+            align-items: center;
+            color: var(--p-color); }
+          body main section figure .p4 form {
+            width: 90%;
+            height: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px; }
+            body main section figure .p4 form textarea {
+              width: 80%;
+              height: 90%;
+              border-radius: 8px;
+              resize: none;
+              background-color: rgba(50, 0, 100, 0.1);
+              outline: none;
+              padding: 15px;
+              font-size: large;
+              border: 2px solid var(--header-color);
+              color: var(--p-color); }
+              body main section figure .p4 form textarea:focus {
+                border: 5px double var(--header-color); }
+            body main section figure .p4 form button {
+              width: 15%;
+              height: 90%;
+              border-radius: 15px;
+              border: 2px solid var(--header-color);
+              cursor: pointer;
+              z-index: 2;
+              background-color: var(--btn);
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+              body main section figure .p4 form button:active {
+                border: 5px double white; }
+              body main section figure .p4 form button img {
+                width: 90%;
+                height: 90%; }
 
 /*# sourceMappingURL=style.css.map */

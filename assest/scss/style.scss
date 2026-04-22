@@ -101,6 +101,29 @@ body {
         width: 100%;
         display: flex;
         flex-direction: column;
+            .pet_section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 100vh;
+                gap: 10px;
+                .pet_1,
+                .pet_2,
+                .pet_3 {
+                    display: flex;
+                    object-fit: cover;
+                    object-position: top;
+                    height: 55%;
+                    width: 30%;
+                    border-radius: 8px;
+                    border: 5px inset var(--btn);
+                }
+                .pet_2 {
+                    object-position: center;
+                    height: 80%;
+                }
+            } 
             section {
                 width: 100%;
                 height: 95vh;
@@ -260,10 +283,9 @@ body {
                                                     height: 90%;
                                                 }
                                             }
-                                    }
-                            }
-            
-            }
-        }
+                                        }
+                            }       
+                        }
+                }
     }
 }
